@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "7f75f321-09ce-4d3e-9c27-7815748b8386",
+		"name": "Bitly",
+		"description": "A url shortner service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetShortUrl",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/urlshortner/shortUrl?longUrl=https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html#randomUUID()",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"urlshortner",
+						"shortUrl"
+					],
+					"query": [
+						{
+							"key": "longUrl",
+							"value": "https://docs.oracle.com/javase/7/docs/api/java/util/UUID.html"
+						}
+					],
+					"hash": "randomUUID()"
+				},
+				"description": "Get a short url for the corresponsing input long url\n"
+			},
+			"response": []
+		},
+		{
+			"name": "GetLongUrl",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/urlshortner/longUrl?shortUrl=https://www.dummybitly.com/aeb5303",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"urlshortner",
+						"longUrl"
+					],
+					"query": [
+						{
+							"key": "shortUrl",
+							"value": "https://www.dummybitly.com/aeb5303"
+						}
+					]
+				},
+				"description": "Get a long url for the corresponsing input short url"
+			},
+			"response": []
+		}
+	]
+}
